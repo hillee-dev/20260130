@@ -1,0 +1,20 @@
+[package]
+name = "rust2026130"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+winapi = { version = "0.3.9", features = [
+    "tlhelp32",      # 进程/线程枚举相关 API（如 CreateToolhelp32Snapshot）
+    "handleapi",     # 句柄操作相关 API（如 CloseHandle）
+    "errhandlingapi",# 错误处理相关 API（如 GetLastError）
+    "winnt",         # 核心类型定义（如 MEMORY_BASIC_INFORMATION、SIZE_T）
+    "psapi",         # 进程内存信息相关 API（如 GetProcessMemoryInfo）
+    "processthreadsapi",
+    "memoryapi",
+    "winbase",
+    "minwindef",
+    "basetsd",
+    "psapi",
+] }
+libc = "0.2"
